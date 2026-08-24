@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+results/
+results_ml/
+results_dl/
+tests/data/_test_results/
+tests/data/_test_results_ml/
+config_override.yaml
+config2.yaml
+.venv/
+venv/

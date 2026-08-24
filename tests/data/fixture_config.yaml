@@ -1,0 +1,9 @@
+input: tests/data/small_fixture.csv
+output_dir: tests/data/_test_results
+alpha: 0.05
+columns:
+  normal_col:
+    type: continuous
+  skewed_col:
+    type: continuous
+steps: [detect_type, assess, recommend, apply_transform, validate, report]

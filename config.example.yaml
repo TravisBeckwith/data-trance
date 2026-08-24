@@ -1,0 +1,18 @@
+# data-trance example config
+input: examples/sample_dataset.csv
+output_dir: results
+alpha: 0.05
+
+columns:
+  already_normal:
+    type: auto
+  right_skewed:
+    type: auto
+  poisson_counts:
+    type: count
+  click_rate:
+    type: proportion
+  category:
+    type: categorical
+
+steps: [detect_type, assess, recommend, apply_transform, validate, report]

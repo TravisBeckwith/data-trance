@@ -1,0 +1,16 @@
+n
+mean
+std
+cv
+skew
+kurtosis_excess
+min
+max
+range
+iqr_over_range
+frac_zero
+frac_negative
+frac_positive
+is_integer_like
+normality_p
+log_n
