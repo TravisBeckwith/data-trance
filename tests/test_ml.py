@@ -65,6 +65,7 @@ def test_predict_ml_returns_valid_transform_and_confidence():
 
 
 def test_predict_dl_returns_valid_transform_and_confidence():
+    pytest.importorskip("torch")
     v = np.random.lognormal(0, 1, 500)
     result = predict(v, method="dl")
     assert "transform" in result

@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.1.1 — post-release fixes
+
+- Fixed `test_predict_dl_returns_valid_transform_and_confidence` failing
+  hard on a base install instead of skipping — it now uses
+  `pytest.importorskip("torch")`, matching the graceful-fallback behavior
+  the pipeline itself already had. The underlying `recommend` step logic
+  was correct; this was a test-hygiene gap, not a functional bug.
+- Fixed the README's "Config" example using column names (`price`,
+  `rating`, `region`) that don't exist in the shipped
+  `examples/sample_dataset.csv` — copy-pasting it would raise `KeyError`.
+  It now shows the actual `config.example.yaml` verbatim, verified to run
+  as-is against the sample data.
+
 ## v0.1.0 — initial release
 
 First release of `data-trance`: a config-driven pipeline that assesses a

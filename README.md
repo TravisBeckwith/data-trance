@@ -95,20 +95,25 @@ results/
 
 ## Config
 
+This is the actual `config.example.yaml` shipped with the repo — copy-paste
+it and it runs against `examples/sample_dataset.csv` exactly as shown:
+
 ```yaml
 input: examples/sample_dataset.csv
 output_dir: results
 alpha: 0.05                 # significance level for the normality test
 
 columns:
-  price:
+  already_normal:
     type: auto               # let data-trance guess (see "Type detection" below)
+  right_skewed:
+    type: auto
+  poisson_counts:
+    type: count               # forces the count-appropriate candidate family
+                              # (sqrt, log1p, Anscombe, Freeman-Tukey, ...)
   click_rate:
     type: proportion         # forces the arcsine/logit/probit candidate family
-  rating:
-    type: ordinal             # skips distribution stats; recommends an *encoding*
-                              # (ordinal-preserving), not a distribution transform
-  region:
+  category:
     type: categorical         # recommends one-hot / target-encoding / hashing
                               # depending on cardinality — see docs/steps.md
     # transform: log         # optional: force a specific transform instead of
@@ -116,6 +121,12 @@ columns:
 
 steps: [detect_type, assess, recommend, apply_transform, validate, report]
 ```
+
+Two more `type:` values exist but aren't in the sample dataset:
+`correlation` (for values bounded in `(-1, 1)`, e.g. correlation
+coefficients) and `ordinal` (for ordered categories, e.g. a 1-5 rating —
+skips distribution stats entirely and recommends an ordinal-preserving
+*encoding* instead of a transform).
 
 See [`docs/config_reference.md`](docs/config_reference.md) for every key.
 
