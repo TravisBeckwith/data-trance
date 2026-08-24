@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "data-trance"
-version = "0.2.0"
+version = "0.1.0"
 description = "Assess a column's distribution, then transform it -- a config-driven pipeline."
 readme = "README.md"
 requires-python = ">=3.9"
