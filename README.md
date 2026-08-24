@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)
+[![DOI](https://zenodo.org/badge/1345057774.svg)](https://doi.org/10.5281/zenodo.22083760)
 
 *Put your data in a different state before you transform it.*
 
