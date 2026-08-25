@@ -51,7 +51,7 @@ def distribution_panel(values: np.ndarray, title: str, out_path: str) -> str:
     # --- boxplot ---
     ax = axes[2]
     if len(v) > 0:
-        ax.boxplot(v, orientation="vertical", patch_artist=True,
+        ax.boxplot(v, patch_artist=True,
                     boxprops=dict(facecolor="#4C72B0", alpha=0.6),
                     medianprops=dict(color="#C44E52", linewidth=2))
     ax.set_title("Boxplot", fontsize=10)
