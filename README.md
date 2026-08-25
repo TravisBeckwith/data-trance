@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)
+[![CI](https://github.com/TravisBeckwith/data-trance/actions/workflows/tests.yml/badge.svg)](https://github.com/TravisBeckwith/data-trance/actions/workflows/tests.yml)
 [![DOI](https://zenodo.org/badge/1345057774.svg)](https://doi.org/10.5281/zenodo.22083760)
 
 *Put your data in a different state before you transform it.*
@@ -246,6 +247,10 @@ See [`docs/steps.md`](docs/steps.md) for what each step does and produces.
 pip install -e ".[dev]"
 pytest
 ```
+
+CI runs this same suite (plus a pyflakes lint pass and an end-to-end CLI
+smoke test) on Python 3.9–3.12 for every push and PR — see
+[`.github/workflows/tests.yml`](.github/workflows/tests.yml).
 
 This is a young, small project — issues and PRs are welcome, especially
 around the candidate-transform shortlists in `recommend.py` and the ML
