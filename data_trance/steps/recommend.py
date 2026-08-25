@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from ..transforms import REGISTRY, apply_transform
+from ..transforms import apply_transform
 from .assess import normality_test
 
 STEP_NAME = "recommend"

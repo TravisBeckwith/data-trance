@@ -11,7 +11,6 @@ STEP_NAME = "apply_transform"
 
 def run(ctx) -> dict:
     df = ctx.df.copy()
-    types = ctx.load("detect_type")
     recs = ctx.load("recommend")
     result = {}
 
