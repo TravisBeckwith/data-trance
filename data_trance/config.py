@@ -4,6 +4,8 @@ data_trance.config
 Loads and validates the pipeline's YAML config file.
 """
 
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 import yaml
